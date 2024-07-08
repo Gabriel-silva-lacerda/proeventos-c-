@@ -1,12 +1,12 @@
 import {
-  ComponentLoaderFactory,
-  PositioningService
-} from "./chunk-KDIT5254.js";
-import {
   AnimationBuilder,
   animate,
   style
 } from "./chunk-6JPY5RNJ.js";
+import {
+  ComponentLoaderFactory,
+  PositioningService
+} from "./chunk-KDIT5254.js";
 import {
   CommonModule,
   NgClass
