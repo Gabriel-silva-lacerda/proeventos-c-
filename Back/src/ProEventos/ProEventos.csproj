@@ -23,4 +23,8 @@
     <ProjectReference Include="..\ProEventos.Application\Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NovaPasta\" />
+  </ItemGroup>
+
 </Project>
