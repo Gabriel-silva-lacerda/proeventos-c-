@@ -1,36 +1,40 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light ">
-  <a class="navbar-brand" routerLink="dashboard">ProEventos</a>
-  <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown" [collapse]="isCollapsed" [isAnimated]="true">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="eventos">Eventos <span class="sr-only">(Página atual)</span></a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="palestrantes">Palestrantes</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="contatos">Contatos</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav">
-      <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle class="nav-link dropdown-toggle" style="cursor: pointer;" id="navbarDropdownMenuLink" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Vinícius
-        </a>
-        <div *dropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="perfil">
-            Perfil
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" *ngIf="showMenu()">
+  <div class="container">
+    <a class="navbar-brand" routerLink="dashboard">
+      <i class="fa fa-user mb-2" style="font-size: 20px; margin-top: 5px;"></i>
+    </a>
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" [collapse]="isCollapsed" [isAnimated]="true">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="eventos/lista">Eventos <span class="sr-only">(Página atual)</span></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="palestrantes">Palestrantes</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="contatos">Contatos</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle class="nav-link dropdown-toggle" style="cursor: pointer;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Vinícius
           </a>
-          <div role="separator" class="divider"></div>
-          <a class="dropdown-item" href="#">
-            Sair
-          </a>
-        </div>
-      </li>
-    </ul>
+          <div *dropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" routerLink="user/perfil">
+              Perfil
+            </a>
+            <div role="separator" class="divider"></div>
+            <a class="dropdown-item" routerLink="user/login">
+              Sair
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
