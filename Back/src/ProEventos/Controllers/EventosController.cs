@@ -22,25 +22,25 @@ namespace ProEventos.Controllers
 
         public EventosController(IEventoService eventoService)
         {
-           _eventoService = eventoService;
+            _eventoService = eventoService;
         }
-     
-      
+
+
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-           try
-           {
+            try
+            {
                 var eventos = await _eventoService.GetAllEventosAsync(true);
                 if (eventos == null) return NoContent();
 
                 return Ok(eventos);
-           }
-           catch(Exception ex)
-           {
+            }
+            catch (Exception ex)
+            {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao tentar recuperar eventos. Erro: {ex.Message}");
-           }
+            }
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
@@ -106,10 +106,10 @@ namespace ProEventos.Controllers
                 var evento = await _eventoService.GetEventosByIdAsync(id, true);
                 if (evento == null) return NoContent();
 
-                return await _eventoService.DeleteEvento(id) ?
-                  Ok("Deletado") :
-                  throw new Exception("Ocorreu um problema não específico ao tentar deletar Evento.");
-                
+                return await _eventoService.DeleteEvento(id)
+                ? Ok(new { message = "Deletado" })
+                : throw new Exception("Ocorreu um problema não específico ao tentar deletar Evento.");
+
             }
             catch (Exception ex)
             {

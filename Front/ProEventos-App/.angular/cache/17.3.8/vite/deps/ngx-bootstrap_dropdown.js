@@ -1,16 +1,16 @@
 import {
+  ComponentLoaderFactory,
+  PositioningService
+} from "./chunk-GTYKNDTC.js";
+import {
   AnimationBuilder,
   animate,
   style
-} from "./chunk-6JPY5RNJ.js";
-import {
-  ComponentLoaderFactory,
-  PositioningService
-} from "./chunk-KDIT5254.js";
+} from "./chunk-4AFCUEVE.js";
 import {
   CommonModule,
   NgClass
-} from "./chunk-K5RXI3I2.js";
+} from "./chunk-4NC6YS4S.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -27,7 +27,6 @@ import {
   Renderer2,
   TemplateRef,
   ViewContainerRef,
-  filter,
   setClassMetadata,
   ɵɵProvidersFeature,
   ɵɵattribute,
@@ -45,7 +44,11 @@ import {
   ɵɵprojectionDef,
   ɵɵproperty,
   ɵɵpureFunction1
-} from "./chunk-MYHJVLMV.js";
+} from "./chunk-TYBWE2P7.js";
+import {
+  filter
+} from "./chunk-Q6ZVTVW4.js";
+import "./chunk-J4B6MK7R.js";
 
 // node_modules/ngx-bootstrap/dropdown/fesm2022/ngx-bootstrap-dropdown.mjs
 var _c0 = ["*"];
