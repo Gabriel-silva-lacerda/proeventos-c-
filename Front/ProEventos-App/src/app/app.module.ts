@@ -28,6 +28,7 @@ import { RegistrationComponent } from './components/user/registration/registrati
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { defineLocale } from 'ngx-bootstrap/chronos';
 import { ptBrLocale } from 'ngx-bootstrap/chronos';
+import { LoteService } from './services/lote.service';
 
 defineLocale('pt-br', ptBrLocale);
 
@@ -68,7 +69,7 @@ defineLocale('pt-br', ptBrLocale);
     }),
     NgxSpinnerModule,
   ],
-  providers: [EventoService],
+  providers: [EventoService, LoteService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
