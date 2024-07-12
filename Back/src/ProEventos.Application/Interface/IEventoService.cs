@@ -1,4 +1,5 @@
-﻿using ProEventos.Dtos;
+﻿using Persistence.Models;
+using ProEventos.Dtos;
 using System.Threading.Tasks;
 
 namespace Application.Interface
@@ -8,8 +9,7 @@ namespace Application.Interface
         Task<EventoDto> AddEventos(EventoDto model);
         Task<EventoDto> UpdateEvento(int EventoId, EventoDto model);
         Task<bool> DeleteEvento(int EventoId);
-        Task<EventoDto[]> GetAllEventosAsync(bool includePalestrantes);
-        Task<EventoDto[]> GetAllEventosByTemaAsync(string tema, bool includePalestrantes );     
+        Task<PageList<EventoDto>> GetAllEventosAsync(PageParams pageParams, bool includePalestrantes);
         Task<EventoDto> GetEventosByIdAsync(int eventoId, bool includePalestrantes );
     }
 }

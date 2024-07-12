@@ -2,6 +2,7 @@
 using AutoMapper;
 using Domain.Models;
 using Persistence.Interfaces;
+using Persistence.Models;
 using ProEventos.Dtos;
 using System;
 using System.Threading.Tasks;
@@ -87,14 +88,19 @@ namespace Application.Service
         }
 
  
-        public async Task<EventoDto[]> GetAllEventosAsync(bool includePalestrantes = false)
+        public async Task<PageList<EventoDto>> GetAllEventosAsync(PageParams pageParams, bool includePalestrantes = false)
         {
             try
             {
-                var eventos = await _eventoPersist.GetAllEventosAsync(false);
+                var eventos = await _eventoPersist.GetAllEventosAsync(pageParams, includePalestrantes);
                 if (eventos == null) return null;
 
-                var resultado = _mapper.Map<EventoDto[]>(eventos);
+                var resultado = _mapper.Map<PageList<EventoDto>>(eventos);
+
+                resultado.CurrentPage = eventos.CurrentPage;
+                resultado.TotalPages = eventos.TotalPages;
+                resultado.PageSize = eventos.PageSize;
+                resultado.TotalCount = eventos.TotalCount;
 
                 return resultado;
             }
@@ -103,24 +109,6 @@ namespace Application.Service
                 throw new Exception(ex.Message);
             }
         }
-        public async Task<EventoDto[]> GetAllEventosByTemaAsync(string tema, bool includePalestrantes)
-        {
-            try
-            {
-                var eventos = await _eventoPersist.GetAllEventosByTemaAsync(tema, includePalestrantes);
-                if (eventos == null) return null;
-
-                var resultado = _mapper.Map<EventoDto[]>(eventos);
-
-                return resultado;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
-
 
         public async Task<EventoDto> GetEventosByIdAsync(int eventoId, bool includePalestrantes)
         {

@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProEventos", "ProEventos.cs
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProEventos.API", "ProEventos.API", "{2CF89EE5-1D2C-4DE3-ACE1-E111D6EC243A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "..\ProEventos.Persistence\Persistence.csproj", "{9B8FD04E-075C-4517-9CF9-19B5E0EC9814}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "..\ProEventos.Persistence\Persistence.csproj", "{9B8FD04E-075C-4517-9CF9-19B5E0EC9814}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "..\ProEventos.Domain\Domain.csproj", "{9345670D-BD67-4671-8F93-89A00C9EDE04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "..\ProEventos.Domain\Domain.csproj", "{9345670D-BD67-4671-8F93-89A00C9EDE04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "..\ProEventos.Application\Application.csproj", "{848103AC-792D-48B4-83EB-C0B75F70BA2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "..\ProEventos.Application\Application.csproj", "{848103AC-792D-48B4-83EB-C0B75F70BA2B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProEventos.Application", "ProEventos.Application", "{C74FF842-D674-49DB-A08D-813B76D30982}"
 EndProject
