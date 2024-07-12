@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="NovaPasta\" />
+    <Folder Include="Resources\Images\" />
   </ItemGroup>
 
 </Project>
